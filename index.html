@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <title>
+    Приложение для оценки личности - Узнайте свой тип личности |
+    Личностный тест
+  </title>
+  <meta name="description" content="Take our free personality assessment quiz to discover your unique personality type. Get detailed insights into your social behavior, decision-making style, and emotional patterns. [21] questions, instant results!" />
+
+  <meta name="keywords" content="personality test, personality quiz, free assessment, personality type, Myers-Briggs alternative, emotional intelligence test, self-discovery quiz, career assessment" />
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/media/personality-ico.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/media/personality-ico.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/media/personality-ico.png" />
+
+  <meta name="author" content="Personality Test" />
+
+  <link rel="preload" href="/styling.css" as="style" />
+  <link rel="preload" href="/script.js" as="script" />
+  <link rel="stylesheet" href="/styling.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Welcome Screen -->
+    <div class="screen welcome-screen active">
+      <div class="hero-orb"></div>
+      <h1 class="dynamic-gradient">
+        Узнайте свой тип личности <br />Психологический тест
+      </h1>
+      <button class="neo-btn start-btn" style="margin-top: 3rem">
+        Начать тест ➔
+      </button>
+    </div>
+
+    <!-- Test Screen -->
+    <div class="screen test-screen">
+      <div class="progress-container">
+        <div class="progress-ring">
+          <svg width="80" height="80">
+            <circle class="progress-circle" cx="40" cy="40" r="36" />
+          </svg>
+          <span class="progress-percent">0%</span>
+        </div>
+      </div>
+      <div class="question-card">
+        <h2 class="question-text"></h2>
+        <div class="options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div class="screen results-screen">
+      <div class="chart-container">
+        <canvas id="personality-chart"></canvas>
+      </div>
+      <div class="personality-badge">
+        <h3 class="type-title"></h3>
+        <p class="type-description"></p>
+      </div>
+      <div class="result-actions">
+        <button class="neo-btn retake-btn">Повторить тест</button>
+      </div>
+    </div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+
+</html>
